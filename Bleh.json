@@ -1,0 +1,46 @@
+{
+  "name": "Bleh",
+  "description": "red amoled eh",
+  "authors": [
+    {
+      "name": "Nel",
+      "id": "499287211381096458"
+    }
+  ],
+  "spec": 2,
+  "semanticColors": {
+    "BACKGROUND_TERTIARY": ["#000000"],
+    "BACKGROUND_ACCENT": ["#08080A"],
+    "SPOILER_HIDDEN_BACKGROUND": ["#1E1F22"],
+	"INTERACTIVE_ACTIVE": ["#ce0000"],
+	"TEXT_LINK": ["#ce0000"],
+	"TEXT_MUTED": ["#ce0000"],
+	"CHENNEL_ICON": ["#ce0000"],
+	"HEADER_PRIMARY": ["#ce0000"],
+	"INTERACTIVE_MUTED": ["#ce0000"],
+	
+    "SPOILER_REVEALED_BACKGROUND": ["#232428"]
+  },
+  "rawColors": {
+    "PRIMARY_560": "#08080A",
+    "PRIMARY_600": "#000000",
+    "PRIMARY_630": "#000000",
+    "PRIMARY_660": "#08080A",
+    "PRIMARY_700": "#08080A",
+    "PRIMARY_800": "#08080A",
+	"BLUE_345": "#ce0000",
+	
+
+    "PLUM_15": "#08080A",
+    "PLUM_17": "#000000",
+    "PLUM_18": "#08080A",
+    "PLUM_19": "#08080A",
+    "PLUM_20": "#000000",
+    "PLUM_23": "#000000",
+    "PLUM_24": "#08080A"
+  },
+  "plus": {
+    "version": "0",
+    "iconpack": "md3"
+  }
+}
