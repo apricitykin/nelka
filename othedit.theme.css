@@ -1,0 +1,176 @@
+ @import url(//dablulite.github.io/css-snippets/DeclutterBar/import.css);
+ [class^="positionContainer_"] {
+  height: calc(100vh - 180px);
+}
+
+:is(main,section)[class^=chatContent] > form,
+form > div[class^=submitContainer] {
+  /* align chatbox */
+  padding: 0px;
+  > div { margin-bottom: 0px; border-radius: 0px; }
+  > div[class^=channelTextArea] {
+    > div { margin: 0px;  }
+    > div > div {
+      padding-top: 4px;
+      min-height: 49px;
+      border-radius: 0px;
+    }
+  }
+
+  /* move slowmode/typing indicator to match */
+  > div[class^=typing] {
+    top: -24px;
+    right: calc(var(--custom-index-scrollbar-margin) * 2 + var(--custom-index-scrollbar-width));
+    margin-left: auto;
+    width: fit-content;
+    padding-left: 2px;
+    padding-right: 9px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: var(--channeltextarea-background);
+  }
+  /* make scrollbar meet chatbox */
+  &::after { display: none; }
+
+  /* fix replies */
+  > div > div > div[class^=attachedBars] {
+    min-height: unset !important;
+    padding-bottom: 4px;
+  }
+}
+
+/* jump to present */
+div[class^=jumpToPresentBar] {
+  left: 0; right: unset;
+  border-radius: 0px 8px 0px 0px;
+  background-color: var(--channeltextarea-background);
+  > button[class^=barButtonMain] {
+    flex: 0 0 auto;
+    display: none;
+  }
+}
+/* this stylesheet requires CSS :has() selector full support */
+:root {	
+	--bubble-color: rgba(17, 17, 17);
+    
+	/* bubble-tight-radius is for the left-side corners
+	   between messages by the same user */
+	--bubble-tight-radius: 0rem;
+    
+	/* bubble-radius is for all right-side corners
+	   and the top corners in the first message by a user
+	   as well as the bottom corners in the last message by a user */
+	--bubble-radius: 0.6rem;
+    
+	--bubble-padding-horizontal: 0.4rem;
+	--bubble-padding-vertical: 0.3rem;
+}
+
+.visualMediaItemContainer__582ad, embedWrapper_c143d9, .oneByOneGridSingle__8c6ef, .mosaicItemMediaMosaic_ac9e71, .imageWrapper__178ee {
+	border-radius: var(--bubble-tight-radius);
+}
+.oneByOneGrid__36e03 {
+	vertical-align: middle;
+}
+.cozy_f5c119 .messageContent_abea64 {
+	margin-left: 0;
+	padding-left: 0.5rem;
+	width: fit-content;
+	max-width: 62ch;
+	border-radius: var(--bubble-tight-radius);
+	border-top-right-radius: var(--bubble-radius);
+	border-bottom-right-radius: var(--bubble-radius);
+}
+.container__62863 {
+	padding-block: 0;
+}
+.embedFull__8dc21 {
+	border-radius: var(--bubble-tight-radius);
+	border-top-right-radius: var(--bubble-radius);
+	border-bottom-right-radius: var(--bubble-radius);
+}
+.visualMediaItemContainer__582ad > div {
+	overflow: hidden;
+	border-radius: var(--bubble-tight-radius);
+	border-top-right-radius: var(--bubble-radius);
+	border-bottom-right-radius: var(--bubble-radius);
+}
+
+.compact-2Nkcau.wrapper_a62503, .cozy_f5c119.wrapper_a62503 {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.divider__01aed {
+	margin: 1px 0;
+}
+
+.messageContent_abea64 {
+	padding: var(--bubble-padding-vertical) var(--bubble-padding-horizontal);
+	background-color: var(--bubble-color);
+}
+
+:is(.message_ccca67.groupStart__7b93c, .divider__01aed + .messageListItem__050f9) .messageContent_abea64 {
+	border-top-left-radius: var(--bubble-radius);
+}
+
+:is(.messageListItem__050f9, .groupStart__7b93c):has(
+	+ .messageListItem__050f9 .groupStart__7b93c,
+	+ .divider__01aed,
+	+ .scrollerSpacer__6b1b6
+):not(:has(.imageWrapper__178ee)) .messageContent_abea64 {
+	border-bottom-left-radius: var(--bubble-radius);
+}
+:is(.messageListItem__050f9, .groupStart__7b93c):has(
+	+ .messageListItem__050f9 .groupStart__7b93c,
+	+ .divider__01aed,
+	+ .scrollerSpacer__9cd32
+) .visualMediaItemContainer__582ad {
+	border-bottom-left-radius: var(--bubble-radius);
+}
+
+.message_ccca67.groupStart__7b93c:has(.messageContent_abea64:empty) .visualMediaItemContainer__582ad {
+	border-top-left-radius: var(--bubble-radius);
+}
+
+.cozy_f5c119.wrapper__09ecc {
+	/* move bubbles closer to the left */
+	padding-left: 68px;
+}
+
+.repliedTextPreview__1a8a4 .messageContent_abea64 {
+	border-radius: var(--bubble-radius);
+	padding-block: 0;
+}
+.repliedMessage__636d2 .repliedTextPreview__1a8a4 .repliedTextContent-2hOYMB, .threadMessageAccessory-2W9mjC .threadMessageAccessoryPreview-13YRmc .threadMessageAccessoryContent-1HTTUq {
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: unset;
+}
+
+.messageContent_abea64 {
+	max-width: 100%;
+}
+
+.markup_a7e664 blockquote {
+	max-width: unset !important;
+}
+
+.blockquoteContainer_f24d1f .blockquoteDivider__96157 {
+	flex-shrink: 0;
+}
+
+/* the following is only if you want messages which are only emoji to not have bubbles: */
+
+.messageContent_abea64:has(.emoji.jumboable) {
+	padding: 0;
+	background: none;
+	border-radius: 0 !important;
+}
+
+.messageListItem__6a4fb:has(.emoji.jumboable) + .messageListItem__6a4fb .messageContent_abea64 {
+	border-top-left-radius: var(--bubble-radius);
+}
+
+.messageListItem__6a4fb:has(+ .messageListItem__6a4fb .emoji.jumboable) .messageContent_abea64 {
+	border-bottom-left-radius: var(--bubble-radius);
+}
